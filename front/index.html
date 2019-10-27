@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<script src="https://visjs.github.io/vis-network/dist/vis-network.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://visjs.github.io/vis-network/dist/vis-network.min.css">
+<script src="graph.js"></script>
+<link rel="stylesheet" type="text/css" href="graph.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    <body style="
+    margin: 0px;
+    overflow: hidden;
+">
+
+<div id="landing" style="
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-family: sans-serif;
+    font-size: 70px;
+    z-index: 2;
+    font-weight: 600;
+    text-align: center;
+">Become smarter every day with Adalearn.
+    <div class = "buttons">
+        <div class = "imteacher">
+            <button class="btn btn-lg btn-primary btn-block" type="submit">I'm a teacher</button>
+        </div>
+        <div class = "imstudent">
+            <button class="btn btn-lg btn-primary btn-block" type="submit">I'm a student</button>
+        </div>
+    </div>
+    </div>
+
+    <div class="header" style="
+    position: absolute;
+    top: 0px;
+    height: 65px;
+    left: 0px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.96);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+">
+    <span class="title" style="
+    color: black;
+    font-family: sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    margin-left: 20px;
+">Adalearn</span>
+    <div class="menu" style="
+    right: 20px;
+    position: absolute;
+">
+
+    <button class="menu_button" style="
+    background: transparent;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 20px;
+    border-color: #5a5a5a;
+    outline: none;
+    font-family: sans-serif;
+    margin: 10px;
+    padding: 6px;
+">Login</button>
+            <button class="menu_button" style="
+    background: transparent;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 20px;
+    border-color: #5a5a5a;
+    outline: none;
+    font-family: sans-serif;
+    margin: 10px;
+    padding: 6px;
+">Courses</button>
+        <button class="menu_button" style="
+    background: transparent;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 20px;
+    border-color: #5a5a5a;
+    outline: none;
+    font-family: sans-serif;
+    margin: 10px;
+    padding: 6px;
+">About</button>
+
+
+	</div>
+</div>
+<div id="overlay"></div>
+<div id="mynetwork"></div>
+
+<script>
+    $(document).ready(function(){
+        $(".imstudent").click(function(){
+            $("#landing").fadeOut(function(){
+                $(this).remove();
+                $(".vis-network").css("opacity",1);
+            });
+        })
+    });
+</script>
+</body>
+</body>
+</html>
